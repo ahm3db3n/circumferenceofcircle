@@ -46,11 +46,11 @@
                         echo "<p>Area: " . round($area, 2) . "</p>";
                         echo "<p>Circumference: " . round($circumference, 2) . "</p>";
                     }
-                    ?>
-                </div>
+                ?>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 </div>
 
 </body>
