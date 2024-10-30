@@ -9,3 +9,42 @@
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
 <body>
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Circle Calculator</span>
+            <div class="mdl-layout-spacer"></div>
+        </div>
+    </header>
+
+    <main class="mdl-layout__content">
+        <div class="page-content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--4-col mdl-cell--4-offset">
+                    <h4>Enter the Diameter of the Circle</h4>
+                    <form action="/" method="POST">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="number" id="diameter" name="diameter" required>
+                            <label class="mdl-textfield__label" for="diameter">Diameter</label>
+                        </div>
+                        <br>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit">
+                            Calculate
+                        </button>
+                    </form>
+
+                    {% if results %}
+                        <h5>Results:</h5>
+                        <p>Diameter: {{ results.diameter }}</p>
+                        <p>Area: {{ results.area }}</p>
+                        <p>Circumference: {{ results.circumference }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
